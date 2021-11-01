@@ -21,6 +21,10 @@ namespace FuncVoorbeeld
         
         // Met een cast naar integer, want Math.Pow (machtsverheffen) returnt een double
         public Func<int, int, int> Machtsverheffen = (a, b) => (int)Math.Pow(a, b);
+        
+        // Opdrachtje: kun je een Func maken die altijd het getal 0 teruggeeft?
+        
+        // Opdrachtje: kun je een Func maken die een 0 retouneert als a + b een oneven getal is (hint: modulo operator, %) en een 1 als het een even getal is
 
 
         public Som(int getal1, int getal2)
@@ -32,7 +36,7 @@ namespace FuncVoorbeeld
         public void RekenUit(Func<int, int, int> uitrekenFunctie)
         {
             // Hier gaan we de uitrekenFunctie parameter gebruiken.
-            int uitkomst = uitrekenFunctie(getal1, getal2);
+            int uitkomst = uitrekenFunctie(getal1, getal2); // uitrekenFunctie kan van alles zijn, zolang het maar twee ints als parameters krijgt en een int teruggeeft.
             Console.WriteLine($"Berekening a: {getal1}, b: {getal2}; Uitkomst = {uitkomst}");
         }
 
